@@ -9,19 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"></activity>
-        <activity android:name=".NavigationDrawerActivity"></activity>
-        <activity
-            android:name=".BottomNavigationActivity"
-            android:label="@string/title_activity_bottom_navigation"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".BasicActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity android:name=".NavigationDrawerActivity" />
+        <activity
+            android:name=".BottomNavigationActivity"
+            android:label="@string/title_activity_bottom_navigation" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
