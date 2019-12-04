@@ -3,10 +3,10 @@ package com.qburst.boilerplate
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
@@ -17,9 +17,10 @@ class BottomNavigationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bottom_navigation)
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
-        val navController = findNavController(R.id.nav_host_fragment)
+        setSupportActionBar(toolbar)
+
+        val navController = findNavController(R.id.bottom_nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
@@ -28,12 +29,12 @@ class BottomNavigationActivity : AppCompatActivity() {
             )
         )
 
-        setupNavigationMenu(navController)
+        setupBottomNavMenu(navController)
     }
 
-    private fun setupNavigationMenu(navController: NavController) {
-        setupActionBarWithNavController(navController)
-        nav_view.setupWithNavController(navController, appBarConfiguration)
+    private fun setupBottomNavMenu(navController: NavController) {
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        bottom_nav_view.setupWithNavController(navController)
 
     }
 }
