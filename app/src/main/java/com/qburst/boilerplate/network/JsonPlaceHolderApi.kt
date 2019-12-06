@@ -1,6 +1,6 @@
 package com.qburst.boilerplate.network
 
-import com.qburst.boilerplate.data.Result
+
 import com.qburst.boilerplate.models.ApiResult
 import com.qburst.boilerplate.models.Failure
 import com.qburst.boilerplate.models.Success
@@ -32,6 +32,7 @@ private fun <T: Any> Call<T>.callWithExceptionHandling(): ApiResult<T> {
         val response = execute()
 
         if(response.isSuccessful && response.body()!=null){
+
 
             Success(response.body() as T)
 

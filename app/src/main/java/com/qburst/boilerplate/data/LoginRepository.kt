@@ -1,6 +1,6 @@
 package com.qburst.boilerplate.data
 
-import com.qburst.boilerplate.data.model.LoggedInUser
+import com.qburst.boilerplate.models.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and
@@ -16,7 +16,8 @@ class LoginRepository(val dataSource: LoginDataSource) {
     val isLoggedIn: Boolean
         get() = user != null
 
-    init {
+    init {q
+
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore
         user = null
