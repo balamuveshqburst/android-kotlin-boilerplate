@@ -9,12 +9,12 @@ private const val SHARED_PREFS_NAME = "shared_prefs"  //SharedPreferences file n
 object PreferenceHelper {
 
     var pref1: String?
-        get() = get("Pref1", "")
-        set(value) = put("Pref1", value)
+        get() = get("PrefKey1", "")
+        set(value) = put("PrefKey1", value)
 
     var pref2: Float?
-        get() = get("Pref2", 0.0F)
-        set(value) = put("Pref2", value)
+        get() = get("PrefKey2", 0.0F)
+        set(value) = put("PrefKey2", value)
 
 
     //Given below are functions. Only edit if you are sure that it is breaking your application.
